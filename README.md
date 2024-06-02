@@ -1,1 +1,1 @@
-# Proyecto-SMUKAkr
+# Proyecto-SMUKA
