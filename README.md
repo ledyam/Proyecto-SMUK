@@ -1,4 +1,4 @@
-### Proyecto-SMUK
+# Proyecto-SMUK
 
 Proyecto SMUK es un videojuego cubano desarrollado por programadores novicios de la Universidad de las Ciencias Informáticas cubana.
 
