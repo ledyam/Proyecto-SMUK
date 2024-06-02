@@ -1,21 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt3loxnh6us6g"]
+[gd_scene load_steps=7 format=3 uid="uid://dt3loxnh6us6g"]
 
 [ext_resource type="Script" path="res://Personaje/Personaje Principal.gd" id="1_tr1hv"]
-[ext_resource type="Texture2D" uid="uid://dijeli8yxjk2b" path="res://Sprites/New Piskel.png" id="2_6ufhp"]
+[ext_resource type="Texture2D" uid="uid://bq6mdcepaaxy5" path="res://Sprites/New Piskel (1).png" id="2_v4eag"]
+
+[sub_resource type="Animation" id="Animation_wu2y1"]
+resource_name = "Moverse"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0642875, 0.0974894, 0.18366, 0.292508, 0.42029),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 4, 6, 1]
+}
+
+[sub_resource type="Animation" id="Animation_bdwif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx6g3"]
+_data = {
+"Moverse": SubResource("Animation_wu2y1"),
+"RESET": SubResource("Animation_bdwif")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1vhq"]
 size = Vector2(38.75, 34.75)
 
 [node name="Node2D" type="CharacterBody2D"]
-position = Vector2(239, 120)
+position = Vector2(195, 162)
 script = ExtResource("1_tr1hv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx6g3")
+}
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(31, -29)
-texture = ExtResource("2_6ufhp")
-vframes = 2
+position = Vector2(43, -67)
+texture = ExtResource("2_v4eag")
+hframes = 3
+vframes = 3
 
 [node name="Node2D" type="CollisionShape2D" parent="."]
-position = Vector2(31, -29)
+position = Vector2(44, -65)
 shape = SubResource("RectangleShape2D_x1vhq")
