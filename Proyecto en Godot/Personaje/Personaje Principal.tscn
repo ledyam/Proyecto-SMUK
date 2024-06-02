@@ -1,13 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt3loxnh6us6g"]
+[gd_scene load_steps=4 format=3 uid="uid://dt3loxnh6us6g"]
+
+[ext_resource type="Script" path="res://Personaje/Personaje Principal.gd" id="1_tr1hv"]
+[ext_resource type="Texture2D" uid="uid://n1aiopsyc1a5" path="res://New Piskel.png" id="2_ad31h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1vhq"]
-size = Vector2(368, 200)
+size = Vector2(27.5, 15)
 
 [node name="Node2D" type="CharacterBody2D"]
+position = Vector2(239, 120)
+script = ExtResource("1_tr1hv")
 
 [node name="Node2D" type="CollisionShape2D" parent="."]
-position = Vector2(394, 230)
+position = Vector2(0, -27)
 shape = SubResource("RectangleShape2D_x1vhq")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-position = Vector2(221, 146)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ad31h")
