@@ -1,16 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt3loxnh6us6g"]
+[gd_scene load_steps=4 format=3 uid="uid://dt3loxnh6us6g"]
 
 [ext_resource type="Script" path="res://Personaje/Personaje Principal.gd" id="1_tr1hv"]
+[ext_resource type="Texture2D" uid="uid://b8xh6rs3gbd4j" path="res://Sprites/cara feliz.png" id="2_oxwqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1vhq"]
-size = Vector2(27.5, 15)
+size = Vector2(38.75, 34.75)
 
 [node name="Node2D" type="CharacterBody2D"]
 position = Vector2(239, 120)
 script = ExtResource("1_tr1hv")
 
-[node name="Node2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -27)
-shape = SubResource("RectangleShape2D_x1vhq")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-18, -30)
+texture = ExtResource("2_oxwqv")
+
+[node name="Node2D" type="CollisionShape2D" parent="."]
+position = Vector2(31, -29)
+shape = SubResource("RectangleShape2D_x1vhq")
