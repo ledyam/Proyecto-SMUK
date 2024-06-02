@@ -14,6 +14,13 @@ config/name="SMUK MOVE"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=556
+window/size/viewport_height=408
+window/size/initial_position_type=0
+window/stretch/mode="canvas_items"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
